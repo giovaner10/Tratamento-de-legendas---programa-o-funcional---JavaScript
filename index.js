@@ -2,7 +2,7 @@ const { join } = require('path')
 const path = require('path')
 const fn = require('./functions')
 
-const simbolo = [ '.', '?', '-', '"', '♪', '_']
+const simbolo = [ '.', '?', '-', '"', '♪', '_', '<i>', '</i>', '\r', '[', ']', '(', ')']
 
 
 const caminho =  path.join(__dirname, '..', 'legendas/legendas')

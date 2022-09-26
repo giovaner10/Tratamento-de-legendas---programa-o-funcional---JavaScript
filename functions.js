@@ -59,6 +59,13 @@ function removerSeNumero(array) {
 }
 
 
+function removerSimbolos(simbolos) {
+    return (array) => {
+        return array.map(el => !el.includes(padraoTexto))
+    }
+}
+
+
 module.exports = {
     lerDiretorio,
     terminadoEm,
