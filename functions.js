@@ -61,7 +61,13 @@ function removerSeNumero(array) {
 
 function removerSimbolos(simbolos) {
     return (array) => {
-        return array.map(el => !el.includes(padraoTexto))
+        return array.map(el => {
+            let textoSemSimbolos = el
+            simbolos.forEach(simbolo => {
+                textoSemSimbolos = textoSemSimbolos.split(simbolo).join('')
+            });
+            return textoSemSimbolos
+        })
     }
 }
 
@@ -72,5 +78,6 @@ module.exports = {
     lerTodosArquivos,
     removerSeVazio,
     removerSeIncluir,
-    removerSeNumero
+    removerSeNumero,
+    removerSimbolos
 }
